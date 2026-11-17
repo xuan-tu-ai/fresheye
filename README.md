@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🐟 FreshEye
+# FreshEye
 
 **Grade fish freshness from a photo of the eye, and know when not to trust the answer.**
 
@@ -14,7 +14,7 @@ when the fish looks unlike anything it was trained on. An LLM assistant explains
 ![React](https://img.shields.io/badge/React%2019-TypeScript%20%2B%20Vite-61DAFB?logo=react&logoColor=black)
 ![Tailwind](https://img.shields.io/badge/Tailwind-v4-06B6D4?logo=tailwindcss&logoColor=white)
 
-[How it works](#-how-it-works) · [Features](#-features) · [Quick start](#-quick-start) · [Configuration](#%EF%B8%8F-configuration) · [Project layout](#-project-layout)
+[How it works](#how-it-works) · [Features](#features) · [Quick start](#quick-start) · [Configuration](#configuration) · [Project layout](#project-layout)
 
 <img src="docs/screenshots/result.png" width="230" alt="Result screen: Highly Fresh with the attention overlay" />
 &nbsp;
@@ -26,7 +26,7 @@ when the fish looks unlike anything it was trained on. An LLM assistant explains
 
 ---
 
-## 💡 Why
+## Why
 
 Most freshness classifiers always return a label, even for a species, a camera or lighting they
 have never seen. In a market or a kitchen that is the dangerous case. FreshEye wraps a research
@@ -38,7 +38,7 @@ The vision model is the ordinal **Swin-Tiny + focal CORN** model from our SAMI-H
 the public *Freshness of the Fish Eyes* (FFE) benchmark. This repository is the application layer
 built on top of it for my graduation thesis.
 
-## ✨ Features
+## Features
 
 - **Ordinal grading** – Swin-Tiny backbone with a CORN head decodes three ordered grades with
   rank-consistent probabilities.
@@ -56,7 +56,7 @@ built on top of it for my graduation thesis.
   a documented design system (`design/`).
 - **One port in production** – FastAPI serves both the API and the built frontend.
 
-## 🔍 How it works
+## How it works
 
 ```mermaid
 flowchart LR
@@ -68,9 +68,9 @@ flowchart LR
     F --> G[kNN vs reference bank<br/>= strangeness]
     D --> H{Decision rule}
     G --> H
-    H -->|confident and familiar| I[✅ ANSWER<br/>grade + overlay]
-    H -->|unsure, fewer than 3 photos| J[📷 ASK MORE<br/>photo of the same fish]
-    H -->|still unsure after 3 photos| K[⛔ ABSTAIN<br/>manual checklist]
+    H -->|confident and familiar| I[ANSWER<br/>grade + overlay]
+    H -->|unsure, fewer than 3 photos| J[ASK MORE<br/>photo of the same fish]
+    H -->|still unsure after 3 photos| K[ABSTAIN<br/>manual checklist]
     I --> L[LLM assistant<br/>explains in Vietnamese]
 ```
 
@@ -84,7 +84,7 @@ add evidence rather than overwrite the first one. The thresholds live in
 <img src="docs/screenshots/stats.png" width="560" alt="Statistics dashboard on desktop" />
 </div>
 
-## 🚀 Quick start
+## Quick start
 
 ### Prerequisites
 
@@ -138,7 +138,7 @@ Copy `frontend/dist` to a folder named `frontend_dist` next to the repository fo
 the backend serves it at `/`, so the API and the UI share one port. For a split deployment
 (e.g. Vercel), set your backend URL in [`frontend/vercel.json`](frontend/vercel.json).
 
-## ⚙️ Configuration
+## Configuration
 
 All runtime settings are in [`backend/config/settings.json`](backend/config/settings.json):
 
@@ -155,7 +155,7 @@ All runtime settings are in [`backend/config/settings.json`](backend/config/sett
 Provider endpoints: OpenAI `https://api.openai.com/v1` · OpenRouter `https://openrouter.ai/api/v1`
 · Gemini `https://generativelanguage.googleapis.com/v1beta/openai`.
 
-## 🧪 Tests
+## Tests
 
 ```bash
 cd backend && pytest
@@ -166,7 +166,7 @@ the agent loop and the hosted-LLM client. Tests that load the model expect the c
 reference bank from the quick start to be in place. `scripts/bench_llm.py` replays scripted conversations
 (`scripts/llm_scenarios.json`) to compare LLMs on tool use and answer quality.
 
-## 📁 Project layout
+## Project layout
 
 ```
 backend/
@@ -183,7 +183,11 @@ frontend/
 design/          design system (DESIGN.md, tokens.css) and screen mockups
 ```
 
-## 🙏 Acknowledgements
+## License
+
+Released under the [MIT License](LICENSE).
+
+## Acknowledgements
 
 - FFE dataset: *Freshness of the Fish Eyes* public benchmark.
 - [timm](https://github.com/huggingface/pytorch-image-models) for the Swin Transformer backbone.
