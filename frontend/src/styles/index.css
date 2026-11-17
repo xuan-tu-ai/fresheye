@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@import "../../../design/tokens.css";
+
+/* Fonts are bundled with the app: the demo server may have no internet access. */
+@import "@fontsource/be-vietnam-pro/400.css";
+@import "@fontsource/be-vietnam-pro/400-italic.css";
+@import "@fontsource/be-vietnam-pro/500.css";
+@import "@fontsource/be-vietnam-pro/600.css";
+@import "@fontsource/be-vietnam-pro/700.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/playfair-display/800.css";
+@import "@fontsource/playfair-display/500-italic.css";
+
+/* Tailwind theme, mapped one-to-one onto design/tokens.css (see design/DESIGN.md). */
+@theme {
+  --color-seaglass: var(--fe-seaglass);
+  --color-seaglass-deep: var(--fe-seaglass-deep);
+  --color-seaglass-soft: var(--fe-seaglass-soft);
+  --color-paper: var(--fe-paper);
+  --color-paper-sunk: var(--fe-paper-sunk);
+  --color-navy: var(--fe-navy);
+  --color-ink-soft: var(--fe-ink-soft);
+  --color-ink-muted: var(--fe-ink-muted);
+  --color-rule: var(--fe-rule);
+  --color-coral: var(--fe-coral);
+  --color-coral-ink: var(--fe-coral-ink);
+  --color-coral-soft: var(--fe-coral-soft);
+  --color-level-very-fresh: var(--fe-level-very-fresh);
+  --color-level-fresh: var(--fe-level-fresh);
+  --color-level-not-fresh: var(--fe-level-not-fresh);
+  --color-level-none: var(--fe-level-none);
+
+  --font-serif: var(--fe-font-serif);
+  --font-sans: var(--fe-font-sans);
+
+  --radius-card: var(--fe-radius-card);
+  --radius-control: var(--fe-radius-control);
+
+  /* Type scale from DESIGN.md. Numbers always use the sans face. */
+  --text-display: 3.75rem;
+  --text-display--line-height: 0.95;
+  --text-page-title: 2.5rem;
+  --text-page-title--line-height: 1.1;
+  --text-title: 1.5rem;
+  --text-title--line-height: 1.2;
+  --text-row-title: 1.25rem;
+  --text-row-title--line-height: 1.25;
+  --text-numeral: 2.125rem;
+  --text-numeral--line-height: 1;
+  --text-body: 1rem;
+  --text-body--line-height: 1.5;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.45;
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.4;
+  --text-label: 0.6875rem;
+  --text-label--line-height: 1.3;
+}
+
+@layer base {
+  html {
+    background: var(--fe-seaglass);
+  }
+  body {
+    margin: 0;
+    color: var(--fe-navy);
+    font-family: var(--fe-font-sans);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-variant-numeric: lining-nums tabular-nums;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* coral-ink, not coral: the ring needs 3:1 against the seaglass page (coral reaches only 2.4:1). */
+  :focus-visible {
+    outline: 3px solid var(--fe-coral-ink);
+    outline-offset: 2px;
+  }
+}
+
+/* Crop frame on the "Khoanh mắt cá" screen: white edge with coral corner brackets. */
+.fe-crop-area {
+  --corner: 28px;
+  --stroke: 4px;
+  border: 1.5px solid rgb(255 255 255 / 0.9);
+  color: rgb(16 42 69 / 0.6);
+  background:
+    linear-gradient(var(--fe-coral) 0 0) top left / var(--corner) var(--stroke),
+    linear-gradient(var(--fe-coral) 0 0) top left / var(--stroke) var(--corner),
+    linear-gradient(var(--fe-coral) 0 0) top right / var(--corner) var(--stroke),
+    linear-gradient(var(--fe-coral) 0 0) top right / var(--stroke) var(--corner),
+    linear-gradient(var(--fe-coral) 0 0) bottom left / var(--corner) var(--stroke),
+    linear-gradient(var(--fe-coral) 0 0) bottom left / var(--stroke) var(--corner),
+    linear-gradient(var(--fe-coral) 0 0) bottom right / var(--corner) var(--stroke),
+    linear-gradient(var(--fe-coral) 0 0) bottom right / var(--stroke) var(--corner);
+  background-repeat: no-repeat;
+}
+
+/* People who ask their device for less motion get none: spinners and typing dots hold still. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

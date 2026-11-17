@@ -1,0 +1,19 @@
+{
+    "checkpoint": "weights/final.pth",
+    "final_config": "weights/final_config.json",
+    "data_dir": "data",
+    "app_data_dir": "app_data",
+    "port": 8200,
+    "llm_provider": "api",
+    "api_base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+    "api_model": "gemini-flash-lite-latest",
+    "api_reasoning_effort": "low",
+    "api_temperature": null,
+    "ollama_url": "http://127.0.0.1:11434",
+    "llm_model": "qwen3:8b",
+    "llm_think": false,
+    "agent_few_shot": false,
+    "agent_drop_notice_rule": false,
+    "llm_think_user": false,
+    "temperature": 0
+}

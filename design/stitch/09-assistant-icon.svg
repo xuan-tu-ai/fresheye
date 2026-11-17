@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none">
+  <!-- Outer Speech Bubble / Chat bubble shape -->
+  <path d="M50 14 C27 14 12 28 12 47 C12 58 18 67 27 73 L23 88 L41 80 C44 81 47 81 50 81 C73 81 88 67 88 47 C88 28 73 14 50 14 Z" 
+        fill="#FFFFFF" 
+        stroke="#102A45" 
+        stroke-width="4.5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  <!-- Headphone / Ear pieces left & right -->
+  <rect x="23" y="40" width="5" height="15" rx="2.5" fill="#102A45" stroke="#102A45" stroke-width="1"/>
+  <rect x="72" y="40" width="5" height="15" rx="2.5" fill="#102A45" stroke="#102A45" stroke-width="1"/>
+  <path d="M26 40 C26 31 35 25 50 25 C65 25 74 31 74 40" fill="none" stroke="#102A45" stroke-width="3" stroke-linecap="round"/>
+  <!-- Cute screen / face visor -->
+  <rect x="29" y="34" width="42" height="27" rx="10" fill="#FFFFFF" stroke="#102A45" stroke-width="4" stroke-linejoin="round"/>
+  <!-- Cute vertical oval eyes -->
+  <ellipse cx="40" cy="46" rx="3.5" ry="5.5" fill="#102A45"/>
+  <ellipse cx="60" cy="46" rx="3.5" ry="5.5" fill="#102A45"/>
+  <!-- Subtle eye shine / sparkle highlights -->
+  <circle cx="41.5" cy="44" r="1.5" fill="#FFFFFF"/>
+  <circle cx="61.5" cy="44" r="1.5" fill="#FFFFFF"/>
+  <!-- Cute smiling mouth -->
+  <path d="M47 51 Q50 54 53 51" fill="none" stroke="#102A45" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

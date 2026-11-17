@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+design/references/
+.pytest_cache/
+*.db
+.playwright-mcp/
+# Local working notes, review screenshots and the machine-specific deploy script stay out of the repository.
+PROGRESS.md
+design/review/
+design/stitch-prompts*.md
+scripts/deploy.ps1
+.env
+!.env.example
+.vercel

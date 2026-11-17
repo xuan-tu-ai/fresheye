@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>FreshEye - Kết quả kiểm tra</title>
+<!-- Google Fonts: Playfair Display & Be Vietnam Pro -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            seaglass: '#C8E8E9',
+            marineNavy: '#102A45',
+            warmCoral: '#F4A285',
+            coralActive: '#E86F51',
+            tealOcean: '#1B6B68',
+            slateMuted: '#5A6B7C',
+            paperCream: '#FAF8F5',
+            cardCream: '#FCFBF9',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Be Vietnam Pro"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="typography">
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .font-editorial {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+  </style>
+<style data-purpose="range-slider">
+    /* Custom styling for the clean minimal heatmap slider */
+    input[type=range].heat-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      cursor: pointer;
+    }
+    input[type=range].heat-slider:focus {
+      outline: none;
+    }
+    input[type=range].heat-slider::-webkit-slider-runnable-track {
+      background: #102A45;
+      height: 2px;
+      border-radius: 9999px;
+    }
+    input[type=range].heat-slider::-moz-range-track {
+      background: #102A45;
+      height: 2px;
+      border-radius: 9999px;
+    }
+    input[type=range].heat-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      background: #E86F51;
+      border: 2px solid #102A45;
+      margin-top: -6px;
+      box-shadow: none;
+    }
+    input[type=range].heat-slider::-moz-range-thumb {
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      background: #E86F51;
+      border: 2px solid #102A45;
+      box-shadow: none;
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="bg-slate-200 min-h-screen flex justify-center items-start text-marineNavy selection:bg-warmCoral selection:text-marineNavy">
+<!-- BEGIN: Mobile Container (iOS 390px Viewport Simulation) -->
+<main class="w-full max-w-[390px] min-h-screen bg-seaglass relative shadow-2xl flex flex-col pb-24 overflow-x-hidden border-x border-marineNavy/20">
+<!-- BEGIN: TopBar -->
+<header class="sticky top-0 z-40 bg-seaglass/95 backdrop-blur-md px-4 py-3.5 border-b border-marineNavy/15 flex items-center justify-between">
+<!-- Back navigation button -->
+<button aria-label="Quay lại" class="w-9 h-9 rounded-full flex items-center justify-center border border-marineNavy/30 bg-seaglass hover:bg-white/40 active:scale-95 transition-all text-marineNavy" type="button">
+<svg class="w-5 h-5 stroke-[2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Screen Title -->
+<h1 class="font-editorial font-bold text-[18px] text-marineNavy tracking-tight">
+        Kết quả kiểm tra
+      </h1>
+<!-- Image Index Pill Chip -->
+<div class="px-2.5 py-1 rounded-full border border-marineNavy text-[11px] font-mono tracking-wider font-semibold bg-paperCream text-marineNavy">
+        ẢNH 1/3
+      </div>
+</header>
+<!-- END: TopBar -->
+<!-- BEGIN: PhotoBlock -->
+<section class="relative pt-4 px-4 pb-2 flex flex-col items-center">
+<!-- Large Coral Background Circle Reference C1 Aesthetic -->
+<div class="absolute -top-3 w-64 h-64 rounded-full bg-warmCoral pointer-events-none z-0 opacity-90"></div>
+<!-- Framed Fish Eye Photo Container -->
+<div class="relative z-10 w-full aspect-square max-w-[320px] rounded-2xl overflow-hidden border border-marineNavy bg-cardCream shadow-none">
+<img alt="Extreme macro close-up of a fresh fish eye with crystal clear convex lens, iridescent silvery scales around the socket, dark pupil, pristine fresh seafood photography, soft studio lighting on clean background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOjaEMefj0fQUO_qRPgL8B4770ys_dvOfKQ3Mv9dwO7jRpxHpzwWA4VqBpZ3_2GWVt9ET3smtZlz9lW4VYh3NTPNff-Rdvy4oK3PZw1k_nopjZJNPCn4o2a_F0QEc5kppS6v51UECRYp09ZzpBEMMlBuMYh21rYT0aiat6vhgo_OgFG7hJafTRjuwpSQbEi7xEZK7tb-LkS12nPEtwY_fv2C5RAmaqDWes49-AEhW9xrRq6zVrHzQf"/>
+<!-- Soft Heatmap Visual Representation (Attention Map Overlay) -->
+<div class="absolute inset-0 pointer-events-none mix-blend-multiply opacity-60 transition-opacity duration-200" data-purpose="attention-layer" id="heatmap-overlay" style="background: radial-gradient(circle at 45% 48%, rgba(232, 111, 81, 0.75) 0%, rgba(244, 162, 133, 0.4) 38%, transparent 65%);"></div>
+<!-- Floating Interactive Badge for AI Attention -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-paperCream/90 backdrop-blur-sm border border-marineNavy text-[11px] font-medium text-marineNavy tracking-tight">
+<span class="w-2 h-2 rounded-full bg-coralActive animate-pulse"></span>
+<span>Vùng mô hình chú ý</span>
+</div>
+</div>
+<!-- Opacity Slider & Calibration Bar -->
+<div class="relative z-10 w-full max-w-[320px] mt-3 px-1 flex items-center justify-between gap-3 text-xs">
+<span class="text-[11px] font-medium text-marineNavy/80 whitespace-nowrap">Độ mờ nhiệt</span>
+<input aria-label="Điều chỉnh độ mờ vùng nhiệt" class="heat-slider w-full h-3 accent-coralActive" id="slider-heatmap" max="100" min="0" type="range" value="60"/>
+<span class="font-mono text-[11px] font-bold text-marineNavy w-8 text-right" id="slider-val">60%</span>
+</div>
+</section>
+<!-- END: PhotoBlock -->
+<!-- BEGIN: VerdictCard (Editorial Centerpiece) -->
+<section class="px-4 mt-3">
+<div class="relative bg-cardCream border border-marineNavy rounded-xl p-4">
+<!-- Top Metadata Label -->
+<div class="flex items-center justify-between pb-2 border-b border-marineNavy/20">
+<span class="text-[11px] uppercase tracking-widest text-marineNavy/70 font-semibold">
+            Mức độ tươi
+          </span>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-tealOcean/10 text-tealOcean border border-tealOcean/30">
+            Đạt chuẩn thương phẩm
+          </span>
+</div>
+<!-- Hero Verdict Content & Score -->
+<div class="pt-3 pb-1 flex items-baseline justify-between">
+<div class="space-y-0.5">
+<h2 class="font-editorial text-5xl font-bold tracking-tight text-marineNavy leading-none">
+              Tươi
+            </h2>
+<p class="text-xs text-marineNavy/70 italic pt-1">Thấu kính trong suốt, giác mạc sáng</p>
+</div>
+<div class="text-right">
+<div class="font-editorial text-3xl font-bold text-coralActive leading-none tracking-tight">
+              96%
+            </div>
+<div class="text-[10px] uppercase tracking-wider text-marineNavy/75 font-semibold mt-1">
+              Độ tin cậy
+            </div>
+</div>
+</div>
+<!-- BEGIN: Horizontal Probability Bars -->
+<div class="mt-4 pt-3 border-t border-marineNavy/15 space-y-2.5">
+<!-- Row 1: Rất tươi -->
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-marineNavy/80">Rất tươi</span>
+<span class="font-mono text-marineNavy font-semibold text-[11px]">2%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-marineNavy/10 overflow-hidden border border-marineNavy/20">
+<div class="h-full bg-tealOcean rounded-full" style="width: 2%;"></div>
+</div>
+</div>
+<!-- Row 2: Tươi (Highlighted Active Row) -->
+<div class="space-y-1 bg-warmCoral/20 -mx-2 px-2 py-1.5 rounded-lg border border-warmCoral/40">
+<div class="flex justify-between text-xs font-bold text-marineNavy">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-coralActive"></span>
+<span>Tươi</span>
+</span>
+<span class="font-mono text-coralActive text-xs">96%</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-marineNavy/15 overflow-hidden border border-marineNavy/30">
+<div class="h-full bg-coralActive rounded-full" style="width: 96%;"></div>
+</div>
+</div>
+<!-- Row 3: Không tươi -->
+<div class="space-y-1">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-marineNavy/80">Không tươi</span>
+<span class="font-mono text-marineNavy font-semibold text-[11px]">2%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-marineNavy/10 overflow-hidden border border-marineNavy/20">
+<div class="h-full bg-slateMuted rounded-full" style="width: 2%;"></div>
+</div>
+</div>
+</div>
+<!-- END: Horizontal Probability Bars -->
+</div>
+</section>
+<!-- END: VerdictCard -->
+<!-- BEGIN: InfoTiles (Two Columns) -->
+<section class="px-4 mt-3 grid grid-cols-2 gap-2.5">
+<!-- Left Tile: Độ lạ của ảnh (OOD Gauge) -->
+<div class="bg-cardCream border border-marineNavy rounded-xl p-3 flex flex-col justify-between">
+<div>
+<div class="text-[10px] uppercase tracking-wider font-semibold text-marineNavy/70">
+            Độ lạ của ảnh
+          </div>
+<div class="font-editorial text-2xl font-bold text-marineNavy mt-1">
+            0,20
+          </div>
+</div>
+<!-- Gauge Bar Visualization -->
+<div class="my-2.5">
+<div class="relative w-full h-2 rounded-full bg-marineNavy/10 border border-marineNavy/25">
+<!-- Active Fill -->
+<div class="h-full bg-tealOcean rounded-full" style="width: 20%;"></div>
+<!-- Threshold Line (0.35) -->
+<div class="absolute top-[-3px] bottom-[-3px] left-[35%] w-[1.5px] bg-coralActive" title="Ngưỡng 0,35"></div>
+</div>
+<div class="flex justify-between text-[9px] font-mono text-marineNavy/60 mt-1">
+<span>0.0</span>
+<span class="text-coralActive font-semibold">| 0,35</span>
+<span>1.0</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1 text-[11px] font-semibold text-tealOcean bg-tealOcean/10 px-2 py-0.5 rounded border border-tealOcean/30 w-fit">
+<svg class="w-3 h-3 stroke-[2.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Ảnh quen thuộc</span>
+</div>
+</div>
+<!-- Right Tile: Loài giống nhất -->
+<div class="bg-cardCream border border-marineNavy rounded-xl p-3 flex flex-col justify-between">
+<div>
+<div class="text-[10px] uppercase tracking-wider font-semibold text-marineNavy/70">
+            Loài giống nhất
+          </div>
+<div class="font-editorial italic text-base font-bold text-marineNavy leading-snug mt-1">
+            Nibea albiflora
+          </div>
+</div>
+<div class="pt-2 border-t border-marineNavy/15 mt-2">
+<div class="text-[11px] font-medium text-marineNavy leading-tight">
+            Cá đù vàng
+          </div>
+<div class="text-[10px] text-marineNavy/65 font-sans">
+            Yellow Croaker
+          </div>
+</div>
+<div class="mt-2 text-[10px] font-mono text-marineNavy/60 uppercase">
+          Mã vạch: #CK-8942
+        </div>
+</div>
+</section>
+<!-- END: InfoTiles -->
+<!-- BEGIN: AssistantPreview -->
+<section class="px-4 mt-3">
+<div class="bg-paperCream border border-marineNavy rounded-xl p-3.5 relative overflow-hidden">
+<!-- Accent stripe on left edge -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-coralActive"></div>
+<div class="flex items-center justify-between mb-1.5 pl-1">
+<div class="flex items-center gap-1.5 text-xs font-bold text-marineNavy uppercase tracking-wider">
+<!-- Outline Fish/Sparkle Icon -->
+<svg class="w-4 h-4 text-coralActive stroke-[2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Trợ lý FreshEye</span>
+</div>
+</div>
+<!-- Assistant Message Body -->
+<p class="text-xs text-marineNavy leading-relaxed pl-1">
+          Mô hình đánh giá con cá ở mức <strong class="font-semibold text-coralActive">Tươi</strong> với độ tin cậy <strong class="font-semibold">96%</strong>. Vùng mô hình chú ý nằm ở bên trái mắt cá.
+        </p>
+<!-- Interactive Question Button -->
+<div class="mt-2.5 pt-2 border-t border-marineNavy/10 flex justify-end pl-1">
+<button class="inline-flex items-center gap-1 text-xs font-bold text-marineNavy underline underline-offset-4 decoration-coralActive hover:text-coralActive transition-colors" type="button">
+<span>Hỏi thêm</span>
+<span aria-hidden="true">→</span>
+</button>
+</div>
+</div>
+</section>
+<!-- END: AssistantPreview -->
+<!-- BEGIN: PrimaryAction -->
+<section class="px-4 mt-4">
+<button class="w-full py-3.5 px-5 bg-marineNavy hover:bg-marineNavy/90 active:scale-[0.99] text-paperCream font-semibold text-sm rounded-xl border border-marineNavy flex items-center justify-center gap-2 transition-all" type="button">
+<!-- Camera scan icon -->
+<svg class="w-4 h-4 stroke-[2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Kiểm tra con cá khác</span>
+</button>
+</section>
+<!-- END: PrimaryAction -->
+<!-- BEGIN: LegalNotice -->
+<div class="px-6 mt-3">
+<p class="text-[11px] italic text-marineNavy/70 text-center leading-normal">
+        Công cụ hỗ trợ, không thay thế kiểm định an toàn thực phẩm.
+      </p>
+</div>
+<!-- END: LegalNotice -->
+<!-- BEGIN: BottomNavigation -->
+<nav class="fixed bottom-0 max-w-[390px] w-full bg-paperCream/95 backdrop-blur-md border-t border-marineNavy/20 px-6 py-2.5 z-50 flex items-center justify-around">
+<!-- Tab 1: Kiểm tra (Active) -->
+<button class="flex flex-col items-center gap-1 group relative" type="button">
+<svg class="w-5 h-5 text-coralActive stroke-[2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] font-bold text-marineNavy uppercase tracking-wider">Kiểm tra</span>
+<!-- Active underline indicator -->
+<span class="w-4 h-0.5 bg-coralActive rounded-full"></span>
+</button>
+<!-- Tab 2: Lịch sử -->
+<button class="flex flex-col items-center gap-1 group text-marineNavy/60 hover:text-marineNavy" type="button">
+<svg class="w-5 h-5 stroke-[1.8]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] font-medium uppercase tracking-wider">Lịch sử</span>
+<span class="w-4 h-0.5 bg-transparent rounded-full"></span>
+</button>
+<!-- Tab 3: Thống kê -->
+<button class="flex flex-col items-center gap-1 group text-marineNavy/60 hover:text-marineNavy" type="button">
+<svg class="w-5 h-5 stroke-[1.8]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] font-medium uppercase tracking-wider">Thống kê</span>
+<span class="w-4 h-0.5 bg-transparent rounded-full"></span>
+</button>
+</nav>
+<!-- END: BottomNavigation -->
+</main>
+<!-- END: Mobile Container -->
+<!-- BEGIN: Heatmap Slider Handler Script -->
+<script data-purpose="event-handlers">
+    // Interactive handler for slider to adjust heatmap layer opacity
+    const slider = document.getElementById('slider-heatmap');
+    const label = document.getElementById('slider-val');
+    const overlay = document.getElementById('heatmap-overlay');
+
+    if (slider && label && overlay) {
+      slider.addEventListener('input', function (e) {
+        const val = e.target.value;
+        label.textContent = val + '%';
+        overlay.style.opacity = (val / 100).toString();
+      });
+    }
+  </script>
+<!-- END: Heatmap Slider Handler Script -->
+</body></html>

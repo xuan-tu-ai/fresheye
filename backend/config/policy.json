@@ -1,0 +1,19 @@
+{
+  "conf_threshold": 0.95,
+  "strangeness_threshold": 0.35,
+  "knn_k": 10,
+  "max_images": 3,
+  "provisional": true,
+  "conf_threshold_source": "paper gate 0.95, kept after the LOSO pilot (2026-10-04)",
+  "strangeness_threshold_source": "chosen from the LOSO pilot (seed 42, 2026-10-04): at conf 0.95 and strangeness 0.35, unseen-species images answered 17.4% at 89.1% accuracy; familiar test images answered 41.0% at 99.4%. Still provisional: to be re-measured with the development-only LOSO protocol.",
+  "knn_k_source": "plan P7 default",
+  "max_images_source": "plan P9 temporary value",
+  "bank": "bank_seed7.npz",
+  "percentiles": {
+    "p50": 0.347254047019387,
+    "p90": 0.4908229979351156,
+    "p95": 0.53022818482606,
+    "p99": 0.5935660927710624
+  },
+  "timestamp": "2026-10-03 13:45:13"
+}

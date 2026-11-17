@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>FreshEye - Kết quả kiểm tra</title>
+<!-- Google Fonts: Playfair Display & Be Vietnam Pro -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            seaglass: '#DDEEEB',
+            seaglassLight: '#E8F4F1',
+            navy: {
+              DEFAULT: '#102A45',
+              card: '#0D2238',
+              muted: '#3C526A'
+            },
+            coral: {
+              DEFAULT: '#EB6D4F',
+              light: '#FDF1EE',
+              border: '#F9D1C7'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Be Vietnam Pro"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+<!-- Custom Stylesheet -->
+<style data-purpose="custom-styling">
+    body {
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+      background-color: #DDEEEB;
+    }
+    .editorial-border {
+      border: 1px solid rgba(16, 42, 69, 0.22);
+    }
+  </style>
+</head>
+<body class="flex justify-center bg-seaglass min-h-screen text-navy font-sans selection:bg-coral selection:text-white">
+<!-- BEGIN: MobileDeviceContainer -->
+<div class="w-[390px] min-h-screen bg-[#DDEEEB] flex flex-col justify-between relative shadow-2xl overflow-x-hidden" data-purpose="mobile-frame">
+<!-- Top decorative backdrop glow -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-32 bg-seaglassLight/70 rounded-full blur-2xl pointer-events-none -z-0"></div>
+<div class="relative z-10 px-4 pt-3 pb-8">
+<!-- BEGIN: TopBar -->
+<header class="flex items-center justify-between py-2 mb-3" data-purpose="top-navigation-bar">
+<!-- Back Button -->
+<button aria-label="Quay lại" class="w-10 h-10 rounded-full bg-white/70 border border-navy/20 flex items-center justify-center active:scale-95 transition-transform text-navy" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M15.75 19.5L8.25 12l7.5-7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- Screen Title -->
+<h1 class="font-serif text-xl font-bold tracking-tight text-navy">
+          Kết quả kiểm tra
+        </h1>
+<!-- Step / Page Badge -->
+<div class="px-2.5 py-1 rounded-full bg-white/80 border border-navy/25 text-[11px] font-bold tracking-wider text-navy uppercase" data-purpose="badge-indicator">
+          ẢNH 3/3
+        </div>
+</header>
+<!-- END: TopBar -->
+<!-- BEGIN: ThumbnailsRow -->
+<section class="grid grid-cols-3 gap-2.5 mb-4" data-purpose="image-thumbnails-group">
+<!-- Thumbnail 1 -->
+<div class="relative aspect-square rounded-2xl overflow-hidden border border-navy/20 bg-white shadow-xs">
+<img alt="Ảnh mắt cá 1" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XtmGhEHwUXDYa7_WSkt1C5fbVWm-RNNNjEHLDzDIU-zWDPwLRKa1Yt2ujhGYmPTSZKSZKQFw2McOZDAvGwJl5DXP9kByRJtrewFn2vWX97fnpKMAs9JUIL77b7g3bKrYJ1mw6Ypbrno2_vG97EgIYIUDfai-6CBR0gVTAovRhgXi0Vci5G_0avgylWv_IC7zHHlbDQb0QapAc-TlVnX4FQPRQ5X5AWSNLkexw-L4gd0qpl2Mz6HsE445E"/>
+<div class="absolute top-1.5 left-1.5 w-4 h-4 rounded-full bg-navy text-white text-[10px] font-bold flex items-center justify-center">1</div>
+<div class="absolute bottom-1.5 right-1.5 w-4 h-4 rounded-full bg-[#20836D] text-white flex items-center justify-center">
+<svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M4.5 12.75l6 6 9-13.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<!-- Thumbnail 2 -->
+<div class="relative aspect-square rounded-2xl overflow-hidden border border-navy/20 bg-white shadow-xs">
+<img alt="Ảnh mắt cá 2" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UN9iJStChRN7Dr8XCzn1rBi8Kr0PQYVsirIVaSFvMIMkJrTr4yVvuw_JOsqUn1N_u2Axm539dHqDwVIMR0mcpFjH955ByDZsbwMdQqZVrv4lmH7HVebeLUFZaHVXZjK_abYu4P3qpuAcAi-0VOsKDy9tDh40WVJg-Km2-EXV-wV_dm3jW0WUTXXZLrBebrStvnc7rd1tHoTOoxIOsX1iMjppsXDeN0T3hgF0-YJChT1ED-fm7lyTkCifY"/>
+<div class="absolute top-1.5 left-1.5 w-4 h-4 rounded-full bg-navy text-white text-[10px] font-bold flex items-center justify-center">2</div>
+<div class="absolute bottom-1.5 right-1.5 w-4 h-4 rounded-full bg-[#20836D] text-white flex items-center justify-center">
+<svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M4.5 12.75l6 6 9-13.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<!-- Thumbnail 3 -->
+<div class="relative aspect-square rounded-2xl overflow-hidden border border-navy/20 bg-white shadow-xs">
+<img alt="Ảnh mắt cá 3" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XtmGhEHwUXDYa7_WSkt1C5fbVWm-RNNNjEHLDzDIU-zWDPwLRKa1Yt2ujhGYmPTSZKSZKQFw2McOZDAvGwJl5DXP9kByRJtrewFn2vWX97fnpKMAs9JUIL77b7g3bKrYJ1mw6Ypbrno2_vG97EgIYIUDfai-6CBR0gVTAovRhgXi0Vci5G_0avgylWv_IC7zHHlbDQb0QapAc-TlVnX4FQPRQ5X5AWSNLkexw-L4gd0qpl2Mz6HsE445E"/>
+<div class="absolute top-1.5 left-1.5 w-4 h-4 rounded-full bg-navy text-white text-[10px] font-bold flex items-center justify-center">3</div>
+<div class="absolute bottom-1.5 right-1.5 w-4 h-4 rounded-full bg-[#20836D] text-white flex items-center justify-center">
+<svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M4.5 12.75l6 6 9-13.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+</section>
+<!-- END: ThumbnailsRow -->
+<!-- BEGIN: MainStatusCard -->
+<section class="bg-white rounded-3xl p-5 mb-3.5 border border-navy/20 shadow-sm" data-purpose="status-evaluation-card">
+<!-- Pill Tag -->
+<div class="flex items-center justify-between mb-3">
+<span class="inline-block px-2.5 py-0.5 rounded-full bg-coral-light border border-coral-border text-coral text-[10.5px] font-semibold tracking-wide uppercase">
+            CHƯA ĐỦ ĐIỀU KIỆN KẾT LUẬN
+          </span>
+</div>
+<!-- Prominent Heading -->
+<h2 class="font-serif text-3xl font-bold text-navy tracking-tight leading-tight mb-2.5">
+          Chưa thể kết luận
+        </h2>
+<!-- Status Narrative -->
+<p class="text-[13px] leading-relaxed text-navy/80 font-normal">
+          FreshEye không đủ chắc chắn để đánh giá con cá này, nên không đưa ra mức độ tươi.
+        </p>
+<!-- Divider line -->
+<div class="my-4 border-t border-navy/10"></div>
+<!-- Reasons Breakdown -->
+<div class="space-y-4" data-purpose="reasons-breakdown">
+<h3 class="text-[11px] font-bold tracking-wider text-navy uppercase">
+            VÌ SAO?
+          </h3>
+<!-- Factor 1: Low Confidence -->
+<div>
+<div class="flex items-baseline justify-between text-[12px] mb-1.5 font-medium">
+<span class="text-navy">Độ tin cậy thấp</span>
+<span class="text-coral font-bold font-mono">35%</span>
+</div>
+<!-- Linear Indicator -->
+<div class="relative w-full h-1.5 bg-[#E4ECE9] rounded-full overflow-visible">
+<!-- Threshold marker at 95% -->
+<div class="absolute -top-1 bottom-0 left-[95%] w-[1.5px] h-3.5 bg-navy/60 z-10 -translate-x-1/2"></div>
+<!-- Progress fill: 35% -->
+<div class="h-full bg-coral rounded-full w-[35%]"></div>
+</div>
+<div class="flex justify-between items-center text-[10px] text-navy/55 mt-1 font-medium">
+<span>Hiện tại (35%)</span>
+<span class="font-semibold text-navy/80">Ngưỡng chuẩn (95%)</span>
+</div>
+</div>
+<!-- Factor 2: High Outlier Score -->
+<div>
+<div class="flex items-baseline justify-between text-[12px] mb-1.5 font-medium">
+<span class="text-navy">Ảnh lạ so với dữ liệu đã học</span>
+<span class="text-coral font-bold font-mono">0,75</span>
+</div>
+<!-- Linear Indicator -->
+<div class="relative w-full h-1.5 bg-[#E4ECE9] rounded-full overflow-visible">
+<!-- Safe Threshold marker at 0.35 (35%) -->
+<div class="absolute -top-1 bottom-0 left-[35%] w-[1.5px] h-3.5 bg-navy/60 z-10 -translate-x-1/2"></div>
+<!-- Progress fill: 75% -->
+<div class="h-full bg-coral rounded-full w-[75%]"></div>
+</div>
+<div class="flex justify-between items-center text-[10px] text-navy/55 mt-1 font-medium">
+<span class="font-semibold text-navy/80">Ngưỡng an toàn (0,35)</span>
+<span>Độ lệch cao (0,75)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: MainStatusCard -->
+<!-- BEGIN: SensoryInspectionCard -->
+<section class="bg-white rounded-3xl p-5 mb-3.5 border border-navy/20 shadow-sm" data-purpose="sensory-inspection-guide">
+<!-- Header with line icon -->
+<div class="flex items-center gap-2 mb-3.5">
+<svg class="w-4 h-4 text-navy stroke-[1.8]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<h3 class="text-[11px] font-bold tracking-wider text-navy uppercase">
+            HÃY KIỂM TRA BẰNG CẢM QUAN
+          </h3>
+</div>
+<!-- 4 Step Criteria List -->
+<div class="space-y-2.5">
+<!-- Item 1: Mắt -->
+<div class="flex items-center gap-3 p-2.5 bg-seaglassLight/50 rounded-xl border border-navy/10">
+<div class="w-8 h-8 rounded-lg bg-white border border-navy/15 flex items-center justify-center text-navy shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<p class="text-[12.5px] text-navy">
+<span class="font-bold">Mắt:</span> trong, lồi, không đục.
+            </p>
+</div>
+<!-- Item 2: Mùi -->
+<div class="flex items-center gap-3 p-2.5 bg-seaglassLight/50 rounded-xl border border-navy/10">
+<div class="w-8 h-8 rounded-lg bg-white border border-navy/15 flex items-center justify-center text-navy shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="M12 3v3.75m4.95-1.7l-2.65 2.65M7.05 5.05l2.65 2.65M6 12a6 6 0 0012 0c0-1.657-.672-3.157-1.757-4.243A5.98 5.98 0 0012 6c-1.657 0-3.157.672-4.243 1.757A5.98 5.98 0 006 12z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<p class="text-[12.5px] text-navy">
+<span class="font-bold">Mùi:</span> tanh nhẹ, không hôi.
+            </p>
+</div>
+<!-- Item 3: Mang cá -->
+<div class="flex items-center gap-3 p-2.5 bg-seaglassLight/50 rounded-xl border border-navy/10">
+<div class="w-8 h-8 rounded-lg bg-white border border-navy/15 flex items-center justify-center text-navy shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<p class="text-[12.5px] text-navy">
+<span class="font-bold">Mang:</span> đỏ tươi, không thâm.
+            </p>
+</div>
+<!-- Item 4: Thịt cá -->
+<div class="flex items-center gap-3 p-2.5 bg-seaglassLight/50 rounded-xl border border-navy/10">
+<div class="w-8 h-8 rounded-lg bg-white border border-navy/15 flex items-center justify-center text-navy shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.7" viewbox="0 0 24 24">
+<path d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.269a8.25 8.25 0 1111.45-11.45" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<p class="text-[12.5px] text-navy">
+<span class="font-bold">Thịt:</span> ấn vào đàn hồi lại ngay.
+            </p>
+</div>
+</div>
+</section>
+<!-- END: SensoryInspectionCard -->
+<!-- BEGIN: AssistantBox -->
+<section class="bg-white rounded-3xl p-4 mb-4 border border-navy/20 shadow-sm" data-purpose="assistant-preview-box">
+<div class="flex items-center gap-2 mb-1.5">
+<!-- Monochromatic Fish Eye Line Icon (No human face) -->
+<div class="w-5 h-5 rounded-full border border-navy/30 flex items-center justify-center text-navy shrink-0">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5z" stroke-linecap="round" stroke-linejoin="round"></path>
+<circle cx="12" cy="12" r="3" stroke-width="2"></circle>
+</svg>
+</div>
+<span class="text-[11px] font-bold tracking-wider text-navy uppercase">
+            TRỢ LÝ FRESHEYE
+          </span>
+</div>
+<p class="text-[12.5px] leading-relaxed text-navy/85 pl-7 mb-2 font-normal">
+          Ảnh khác khá nhiều so với những ảnh mô hình đã học, nên tôi không đoán mức độ tươi.
+        </p>
+<div class="flex justify-end">
+<button class="text-[12px] font-semibold text-navy hover:text-coral transition-colors flex items-center gap-1 group py-0.5" type="button">
+<span class="underline underline-offset-4 decoration-navy/30 group-hover:decoration-coral">Hỏi thêm</span>
+<span class="transition-transform group-hover:translate-x-0.5">→</span>
+</button>
+</div>
+</section>
+<!-- END: AssistantBox -->
+<!-- BEGIN: PrimaryAction -->
+<div class="mb-3" data-purpose="primary-action-container">
+<button class="w-full h-12 bg-navy text-white rounded-2xl font-medium text-[14px] flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-all hover:bg-navy-card" type="button">
+<!-- Rotate / Refresh Line Icon -->
+<svg class="w-4 h-4 text-white stroke-[2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Bắt đầu lượt kiểm tra mới</span>
+</button>
+</div>
+<!-- END: PrimaryAction -->
+<!-- BEGIN: LegalDisclaimer -->
+<p class="text-[10px] text-center text-navy/55 italic leading-tight mb-2" data-purpose="legal-disclaimer">
+        Công cụ hỗ trợ, không thay thế kiểm định an toàn thực phẩm.
+      </p>
+<!-- END: LegalDisclaimer -->
+</div>
+<!-- BEGIN: BottomNavigation -->
+<nav class="w-full bg-[#E5F1EE]/95 backdrop-blur-md border-t border-navy/15 pt-2 pb-5 px-6 sticky bottom-0 z-20" data-purpose="bottom-navigation-bar">
+<div class="flex items-center justify-between max-w-[340px] mx-auto">
+<!-- Tab 1: KIỂM TRA (Active) -->
+<button class="flex flex-col items-center gap-1 text-navy relative pb-1" type="button">
+<svg class="w-5 h-5 stroke-[2] text-coral" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<circle cx="11" cy="11" r="7"></circle>
+<path d="M21 21l-4.35-4.35" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M11 8v6M8 11h6" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] font-bold tracking-wider uppercase text-navy">KIỂM TRA</span>
+<!-- Coral underline for active state -->
+<div class="w-5 h-[2px] bg-coral rounded-full absolute -bottom-0.5"></div>
+</button>
+<!-- Tab 2: LỊCH SỬ -->
+<button class="flex flex-col items-center gap-1 text-navy/50 hover:text-navy transition-colors" type="button">
+<svg class="w-5 h-5 stroke-[1.8]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] font-medium tracking-wider uppercase">LỊCH SỬ</span>
+</button>
+<!-- Tab 3: THỐNG KÊ -->
+<button class="flex flex-col items-center gap-1 text-navy/50 hover:text-navy transition-colors" type="button">
+<svg class="w-5 h-5 stroke-[1.8]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] font-medium tracking-wider uppercase">THỐNG KÊ</span>
+</button>
+</div>
+</nav>
+<!-- END: BottomNavigation -->
+</div>
+<!-- END: MobileDeviceContainer -->
+</body></html>

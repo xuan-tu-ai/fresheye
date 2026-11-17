@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FreshEye - Lịch sử</title>
+<!-- Google Fonts for Editorial Serif & Clean Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            seaglass: {
+              DEFAULT: '#DDF0EA',
+              light: '#EBF5F1',
+              dark: '#CEE5DD',
+            },
+            navy: {
+              DEFAULT: '#102A45',
+              deep: '#0F2438',
+              muted: 'rgba(16, 42, 69, 0.7)',
+              faint: 'rgba(16, 42, 69, 0.45)',
+              border: '#102A45',
+            },
+            coral: {
+              DEFAULT: '#EB6D4F',
+              accent: '#F37053',
+              soft: '#FCECE8',
+            },
+            fresh: '#2D8A6E',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Be Vietnam Pro"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layout">
+    body {
+      background-color: #DDF0EA;
+      color: #102A45;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-scroll {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="flex justify-center min-h-screen bg-[#DDF0EA]">
+<!-- BEGIN: MobileDeviceFrame -->
+<div class="w-full max-w-[390px] min-h-screen flex flex-col justify-between relative bg-[#DDF0EA] text-[#102A45] border-x border-[#102A45]/10">
+<!-- BEGIN: TopBarAndContent -->
+<main class="flex-1 px-5 pt-8 pb-24">
+<!-- BEGIN: HeaderSection -->
+<header class="mb-5" data-purpose="page-header">
+<h1 class="font-serif text-[32px] font-bold tracking-tight text-[#102A45] leading-tight">
+          Lịch sử
+        </h1>
+<p class="text-xs text-[#102A45]/70 mt-1 font-medium">Nhật ký kiểm tra độ tươi cá qua hình ảnh</p>
+</header>
+<!-- END: HeaderSection -->
+<!-- BEGIN: FilterChips -->
+<section class="mb-6 flex gap-2 overflow-x-auto custom-scroll py-1" data-purpose="filter-bar">
+<!-- Active Chip -->
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-[#102A45] text-white text-xs font-semibold tracking-wide transition-colors" type="button">
+          Tất cả
+        </button>
+<!-- Inactive Chip 1 -->
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/70 border border-[#102A45] text-[#102A45] text-xs font-medium hover:bg-white transition-colors" type="button">
+          Đã có kết luận
+        </button>
+<!-- Inactive Chip 2 -->
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-white/70 border border-[#102A45] text-[#102A45] text-xs font-medium hover:bg-white transition-colors" type="button">
+          Từ chối kết luận
+        </button>
+</section>
+<!-- END: FilterChips -->
+<!-- BEGIN: LedgerListing -->
+<section class="space-y-6" data-purpose="history-ledger">
+<!-- GROUP: Hôm nay -->
+<div class="space-y-2">
+<!-- Date Ledger Header -->
+<div class="flex items-center justify-between border-b border-[#102A45]/20 pb-1.5 px-0.5">
+<span class="text-[11px] font-semibold tracking-widest text-[#102A45]/75 uppercase">Hôm nay</span>
+<span class="text-[10px] text-[#102A45]/50 tracking-wider">3 BẢN GHI</span>
+</div>
+<!-- Ledger Card Container -->
+<div class="bg-white rounded-2xl border border-[#102A45] overflow-hidden divide-y divide-[#102A45]/15">
+<!-- Item 1: Tươi -->
+<article class="p-3.5 flex items-center gap-3.5 hover:bg-[#F9FCFA] transition-colors" data-purpose="history-item">
+<div class="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 border border-[#102A45]/30 bg-slate-100">
+<img alt="Mắt cá tươi" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XtmGhEHwUXDYa7_WSkt1C5fbVWm-RNNNjEHLDzDIU-zWDPwLRKa1Yt2ujhGYmPTSZKSZKQFw2McOZDAvGwJl5DXP9kByRJtrewFn2vWX97fnpKMAs9JUIL77b7g3bKrYJ1mw6Ypbrno2_vG97EgIYIUDfai-6CBR0gVTAovRhgXi0Vci5G_0avgylWv_IC7zHHlbDQb0QapAc-TlVnX4FQPRQ5X5AWSNLkexw-L4gd0qpl2Mz6HsE445E"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#EB6D4F] flex-shrink-0"></span>
+<span class="font-serif font-bold text-lg leading-none text-[#102A45]">Tươi</span>
+</div>
+<p class="text-xs text-[#102A45]/70 mt-1 font-normal">Độ tin cậy 96% · 1 ảnh</p>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0 text-right">
+<span class="text-xs font-medium text-[#102A45]/60">10:42</span>
+<svg class="w-4 h-4 text-[#102A45]/40" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</article>
+<!-- Item 2: Từ chối kết luận -->
+<article class="p-3.5 flex items-center gap-3.5 hover:bg-[#F9FCFA] transition-colors" data-purpose="history-item">
+<div class="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 border border-[#102A45]/30 bg-slate-100">
+<img alt="Mắt cá đục cần kiểm định lại" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UN9iJStChRN7Dr8XCzn1rBi8Kr0PQYVsirIVaSFvMIMkJrTr4yVvuw_JOsqUn1N_u2Axm539dHqDwVIMR0mcpFjH955ByDZsbwMdQqZVrv4lmH7HVebeLUFZaHVXZjK_abYu4P3qpuAcAi-0VOsKDy9tDh40WVJg-Km2-EXV-wV_dm3jW0WUTXXZLrBebrStvnc7rd1tHoTOoxIOsX1iMjppsXDeN0T3hgF0-YJChT1ED-fm7lyTkCifY"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#102A45]/40 flex-shrink-0"></span>
+<span class="font-serif font-bold text-base leading-none text-[#102A45]">Từ chối kết luận</span>
+</div>
+<p class="text-xs text-[#102A45]/70 mt-1 font-normal truncate">Ảnh lạ, độ tin cậy thấp · 3 ảnh</p>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0 text-right">
+<span class="text-xs font-medium text-[#102A45]/60">09:15</span>
+<svg class="w-4 h-4 text-[#102A45]/40" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</article>
+<!-- Item 3: Rất tươi -->
+<article class="p-3.5 flex items-center gap-3.5 hover:bg-[#F9FCFA] transition-colors" data-purpose="history-item">
+<div class="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 border border-[#102A45]/30 bg-slate-100">
+<img alt="Mắt cá trong suốt rất tươi" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XtmGhEHwUXDYa7_WSkt1C5fbVWm-RNNNjEHLDzDIU-zWDPwLRKa1Yt2ujhGYmPTSZKSZKQFw2McOZDAvGwJl5DXP9kByRJtrewFn2vWX97fnpKMAs9JUIL77b7g3bKrYJ1mw6Ypbrno2_vG97EgIYIUDfai-6CBR0gVTAovRhgXi0Vci5G_0avgylWv_IC7zHHlbDQb0QapAc-TlVnX4FQPRQ5X5AWSNLkexw-L4gd0qpl2Mz6HsE445E"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#2D8A6E] flex-shrink-0"></span>
+<span class="font-serif font-bold text-lg leading-none text-[#102A45]">Rất tươi</span>
+</div>
+<p class="text-xs text-[#102A45]/70 mt-1 font-normal">Độ tin cậy 98% · 2 ảnh</p>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0 text-right">
+<span class="text-xs font-medium text-[#102A45]/60">08:03</span>
+<svg class="w-4 h-4 text-[#102A45]/40" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</article>
+</div>
+</div>
+<!-- GROUP: Hôm qua -->
+<div class="space-y-2">
+<!-- Date Ledger Header -->
+<div class="flex items-center justify-between border-b border-[#102A45]/20 pb-1.5 px-0.5">
+<span class="text-[11px] font-semibold tracking-widest text-[#102A45]/75 uppercase">Hôm qua</span>
+<span class="text-[10px] text-[#102A45]/50 tracking-wider">2 BẢN GHI</span>
+</div>
+<!-- Ledger Card Container -->
+<div class="bg-white rounded-2xl border border-[#102A45] overflow-hidden divide-y divide-[#102A45]/15">
+<!-- Item 4: Không tươi -->
+<article class="p-3.5 flex items-center gap-3.5 hover:bg-[#F9FCFA] transition-colors" data-purpose="history-item">
+<div class="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 border border-[#102A45]/30 bg-slate-100">
+<img alt="Mắt cá mờ đục không tươi" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UN9iJStChRN7Dr8XCzn1rBi8Kr0PQYVsirIVaSFvMIMkJrTr4yVvuw_JOsqUn1N_u2Axm539dHqDwVIMR0mcpFjH955ByDZsbwMdQqZVrv4lmH7HVebeLUFZaHVXZjK_abYu4P3qpuAcAi-0VOsKDy9tDh40WVJg-Km2-EXV-wV_dm3jW0WUTXXZLrBebrStvnc7rd1tHoTOoxIOsX1iMjppsXDeN0T3hgF0-YJChT1ED-fm7lyTkCifY"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#8C9BAE] flex-shrink-0"></span>
+<span class="font-serif font-bold text-lg leading-none text-[#102A45]">Không tươi</span>
+</div>
+<p class="text-xs text-[#102A45]/70 mt-1 font-normal">Độ tin cậy 97% · 1 ảnh</p>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0 text-right">
+<span class="text-xs font-medium text-[#102A45]/60">17:20</span>
+<svg class="w-4 h-4 text-[#102A45]/40" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</article>
+<!-- Item 5: Tươi -->
+<article class="p-3.5 flex items-center gap-3.5 hover:bg-[#F9FCFA] transition-colors" data-purpose="history-item">
+<div class="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 border border-[#102A45]/30 bg-slate-100">
+<img alt="Mắt cá tươi" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XtmGhEHwUXDYa7_WSkt1C5fbVWm-RNNNjEHLDzDIU-zWDPwLRKa1Yt2ujhGYmPTSZKSZKQFw2McOZDAvGwJl5DXP9kByRJtrewFn2vWX97fnpKMAs9JUIL77b7g3bKrYJ1mw6Ypbrno2_vG97EgIYIUDfai-6CBR0gVTAovRhgXi0Vci5G_0avgylWv_IC7zHHlbDQb0QapAc-TlVnX4FQPRQ5X5AWSNLkexw-L4gd0qpl2Mz6HsE445E"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#EB6D4F] flex-shrink-0"></span>
+<span class="font-serif font-bold text-lg leading-none text-[#102A45]">Tươi</span>
+</div>
+<p class="text-xs text-[#102A45]/70 mt-1 font-normal">Độ tin cậy 95% · 3 ảnh</p>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0 text-right">
+<span class="text-xs font-medium text-[#102A45]/60">16:48</span>
+<svg class="w-4 h-4 text-[#102A45]/40" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- END: LedgerListing -->
+<!-- BEGIN: Disclaimer -->
+<footer class="mt-8 text-center" data-purpose="legal-disclaimer">
+<p class="text-[11px] italic text-[#102A45]/60 leading-relaxed max-w-[320px] mx-auto">
+          Công cụ hỗ trợ, không thay thế kiểm định an toàn thực phẩm.
+        </p>
+</footer>
+<!-- END: Disclaimer -->
+</main>
+<!-- END: TopBarAndContent -->
+<!-- BEGIN: BottomNavigation -->
+<nav class="fixed bottom-0 w-full max-w-[390px] bg-[#DDF0EA]/95 backdrop-blur-md border-t border-[#102A45]/15 py-2.5 px-6 z-30" data-purpose="bottom-navigation">
+<div class="flex justify-between items-center text-center">
+<!-- Tab 1: KIỂM TRA (Inactive) -->
+<a class="flex flex-col items-center gap-1 text-[#102A45]/60 hover:text-[#102A45] transition-colors flex-1" href="#">
+<svg class="w-5 h-5 stroke-[1.8]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] font-bold tracking-wider uppercase">Kiểm tra</span>
+</a>
+<!-- Tab 2: LỊCH SỬ (Active) -->
+<a class="flex flex-col items-center gap-1 text-[#102A45] relative flex-1" href="#">
+<svg class="w-5 h-5 stroke-[2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] font-bold tracking-wider uppercase">Lịch sử</span>
+<!-- Active indicator bar matching screenshot accent -->
+<div class="w-5 h-[2.5px] bg-[#EB6D4F] rounded-full mt-0.5"></div>
+</a>
+<!-- Tab 3: THỐNG KÊ (Inactive) -->
+<a class="flex flex-col items-center gap-1 text-[#102A45]/60 hover:text-[#102A45] transition-colors flex-1" href="#">
+<svg class="w-5 h-5 stroke-[1.8]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-[10px] font-bold tracking-wider uppercase">Thống kê</span>
+</a>
+</div>
+</nav>
+<!-- END: BottomNavigation -->
+</div>
+<!-- END: MobileDeviceFrame -->
+</body></html>

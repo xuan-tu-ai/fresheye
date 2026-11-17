@@ -1,0 +1,40 @@
+/* FreshEye design tokens. Source of truth for the Tailwind theme (see DESIGN.md). */
+:root {
+  /* Surfaces */
+  --fe-seaglass: #d5ece8;        /* page background */
+  --fe-seaglass-deep: #c2e1dc;   /* pressed / track on seaglass */
+  --fe-seaglass-soft: #e8f4f1;   /* highlighted row inside a card */
+  --fe-paper: #fcfbf9;           /* cards */
+  --fe-paper-sunk: #f1f4f1;      /* bar tracks, empty slots */
+
+  /* Ink */
+  --fe-navy: #102a45;            /* text, rules, primary button */
+  --fe-ink-soft: #3f5468;        /* secondary text */
+  --fe-ink-muted: #52667a;       /* captions; lowest text contrast allowed */
+  --fe-rule: rgba(16, 42, 69, 0.16); /* hairlines inside cards */
+
+  /* Accent */
+  --fe-coral: #e86f51;           /* fills, large numerals, active marks */
+  --fe-coral-ink: #ae3f26;       /* coral used as small text or links */
+  --fe-coral-soft: #fcece8;      /* assistant accent blocks only, never a status */
+
+  /* Freshness scale: always paired with a shape marker and the word */
+  --fe-level-very-fresh: #17635f;
+  --fe-level-fresh: #1e6894;
+  --fe-level-not-fresh: #8f5508;
+  --fe-level-none: #52667a;      /* no conclusion: never a level colour */
+
+  /* Type */
+  --fe-font-serif: "Playfair Display", Georgia, serif;
+  --fe-font-sans: "Be Vietnam Pro", system-ui, sans-serif;
+
+  /* Shape */
+  --fe-radius-card: 20px;
+  --fe-radius-control: 12px;
+  --fe-radius-pill: 9999px;
+  --fe-border: 1.5px solid var(--fe-navy);
+
+  /* Space (4 px rhythm) */
+  --fe-gutter: 16px;
+  --fe-card-pad: 20px;
+}

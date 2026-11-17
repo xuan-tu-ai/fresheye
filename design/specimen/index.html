@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FreshEye design system</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../tokens.css">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--fe-seaglass); color: var(--fe-navy); font: 400 16px/1.5 var(--fe-font-sans);
+         -webkit-font-smoothing: antialiased;
+         font-variant-numeric: lining-nums tabular-nums; }
+  .page { max-width: 390px; margin: 0 auto; padding: 24px var(--fe-gutter) 48px; display: grid; gap: 28px; }
+  h1 { font: 700 40px/1.1 var(--fe-font-serif); letter-spacing: -0.01em; }
+  h2 { font: 600 11px/1.3 var(--fe-font-sans); letter-spacing: 0.08em; text-transform: uppercase;
+       color: var(--fe-ink-soft); padding-bottom: 8px; border-bottom: 1px solid var(--fe-rule); margin-bottom: 14px; }
+  .lede { color: var(--fe-ink-soft); margin-top: 6px; }
+  .card { background: var(--fe-paper); border: var(--fe-border); border-radius: var(--fe-radius-card);
+          padding: var(--fe-card-pad); }
+  .label { font: 600 11px/1.3 var(--fe-font-sans); letter-spacing: 0.08em; text-transform: uppercase;
+           color: var(--fe-ink-soft); }
+
+  /* palette */
+  .swatches { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .sw { border: 1px solid var(--fe-rule); border-radius: 12px; overflow: hidden; background: var(--fe-paper); }
+  .sw i { display: block; height: 44px; }
+  .sw b { display: block; font: 600 12px/1.3 var(--fe-font-sans); padding: 6px 8px 0; }
+  .sw span { display: block; font-size: 11px; color: var(--fe-ink-muted); padding: 0 8px 7px; }
+
+  /* type */
+  .type > * + * { margin-top: 12px; }
+  .t-display { font: 800 60px/1 var(--fe-font-serif); letter-spacing: -0.02em; }
+  .t-title { font: 700 24px/1.2 var(--fe-font-serif); }
+  .t-row { font: 700 20px/1.25 var(--fe-font-serif); }
+  .t-numeral { font: 600 34px/1 var(--fe-font-sans); letter-spacing: -0.01em; color: var(--fe-coral-ink); }
+  .t-body { font-size: 16px; }
+  .t-small { font-size: 14px; color: var(--fe-ink-soft); }
+  .t-caption { font-size: 12px; color: var(--fe-ink-muted); }
+  .t-latin { font: italic 500 22px/1.2 var(--fe-font-serif); }
+
+  /* level markers: shape carries the level, colour supports it */
+  .lv { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+  .mk { width: 12px; height: 12px; border-radius: 50%; border: 2px solid currentColor; flex: none; }
+  .very { color: var(--fe-level-very-fresh); } .very .mk { background: currentColor; }
+  .fresh { color: var(--fe-level-fresh); }
+  .fresh .mk { background: linear-gradient(90deg, currentColor 50%, transparent 50%); }
+  .not { color: var(--fe-level-not-fresh); }
+  .none { color: var(--fe-level-none); } .none .mk { border-radius: 2px; height: 3px; border: 0; background: currentColor; }
+  .levels { display: grid; gap: 10px; }
+
+  /* controls */
+  .btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 52px;
+         border-radius: var(--fe-radius-control); border: var(--fe-border); font: 600 16px/1 var(--fe-font-sans);
+         color: var(--fe-navy); background: transparent; }
+  .btn.primary { background: var(--fe-navy); color: #fff; }
+  .btn.accent { background: var(--fe-coral); border-color: var(--fe-navy); color: var(--fe-navy); }
+  .btn:focus-visible, .chip:focus-visible { outline: 3px solid var(--fe-coral); outline-offset: 2px; }
+  .stack { display: grid; gap: 10px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { border: var(--fe-border); border-radius: var(--fe-radius-pill); padding: 8px 14px; min-height: 36px;
+          font: 500 14px/1.2 var(--fe-font-sans); background: var(--fe-paper); color: var(--fe-navy); }
+  .chip.on { background: var(--fe-navy); color: #fff; }
+  .link { color: var(--fe-coral-ink); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+
+  /* verdict sample */
+  .verdict-head { display: flex; justify-content: space-between; align-items: end; gap: 12px;
+                  padding-bottom: 16px; border-bottom: 1px solid var(--fe-rule); }
+  .verdict-word { font: 800 60px/0.95 var(--fe-font-serif); letter-spacing: -0.02em; margin-top: 6px; }
+  .conf { text-align: right; }
+  .conf b { display: block; font: 600 34px/1 var(--fe-font-sans); letter-spacing: -0.01em; color: var(--fe-coral-ink); margin-bottom: 4px; }
+  .bars { display: grid; gap: 12px; padding-top: 16px; }
+  .bar-row { display: grid; gap: 6px; }
+  .bar-row .top { display: flex; justify-content: space-between; font-size: 14px; }
+  .bar-row.is-top { background: var(--fe-seaglass-soft); margin: 0 -10px; padding: 10px; border-radius: 12px; }
+  .bar-row.is-top .top { font-weight: 600; }
+  .track { height: 8px; border-radius: 9999px; background: var(--fe-paper-sunk); border: 1px solid var(--fe-rule);
+           overflow: hidden; }
+  .track i { display: block; height: 100%; background: currentColor; border-radius: 9999px; }
+
+  /* gauge */
+  .gauge-val { font: 600 30px/1 var(--fe-font-sans); letter-spacing: -0.01em; margin: 8px 0 12px; }
+  .gauge { position: relative; height: 8px; border-radius: 9999px; background: var(--fe-paper-sunk);
+           border: 1px solid var(--fe-rule); }
+  .gauge i { position: absolute; inset: 0 auto 0 0; background: var(--fe-navy); border-radius: 9999px; }
+  .gauge u { position: absolute; top: -5px; bottom: -5px; width: 2px; background: var(--fe-coral-ink); }
+  .gauge-scale { position: relative; height: 18px; font-size: 12px; color: var(--fe-ink-muted); margin-top: 6px; }
+  .gauge-scale span { position: absolute; transform: translateX(-50%); color: var(--fe-coral-ink); font-weight: 600; }
+
+  /* list row */
+  .rows { padding: 0; overflow: hidden; }
+  .row { display: grid; grid-template-columns: 52px 1fr auto; gap: 14px; align-items: center; padding: 14px 18px; }
+  .row + .row { border-top: 1px solid var(--fe-rule); }
+  .thumb { width: 52px; height: 52px; border-radius: 12px; border: 1px solid var(--fe-rule);
+           background: linear-gradient(135deg, #b9c8cf, #e7ecec 55%, #8fa3ad); }
+  .row .t-row { display: flex; align-items: center; gap: 8px; }
+  .row time { font-size: 14px; color: var(--fe-ink-soft); }
+
+  /* notice + nav */
+  .notice { font: italic 400 13px/1.45 var(--fe-font-sans); color: var(--fe-ink-soft); text-align: center; }
+  .nav { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--fe-paper);
+         border-top: 1px solid var(--fe-rule); border-radius: 0 0 var(--fe-radius-card) var(--fe-radius-card); }
+  .nav a { display: grid; justify-items: center; gap: 6px; padding: 12px 0 14px; min-height: 60px;
+           font: 600 12px/1 var(--fe-font-sans); color: var(--fe-ink-muted); text-decoration: none; }
+  .nav a[aria-current] { color: var(--fe-navy); }
+  .nav a[aria-current]::after { content: ""; width: 22px; height: 3px; border-radius: 3px; background: var(--fe-coral); }
+  .nav svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+</style>
+</head>
+<body>
+<main class="page">
+  <header>
+    <h1>FreshEye</h1>
+    <p class="lede">Hệ thiết kế: màu, chữ và các thành phần nền, rút từ tám màn Stitch của hướng Chợ cá biên tập.</p>
+  </header>
+
+  <section>
+    <h2>Màu nền và mực</h2>
+    <div class="swatches">
+      <div class="sw"><i style="background:#d5ece8"></i><b>Xanh ngọc</b><span>#D5ECE8 · nền trang</span></div>
+      <div class="sw"><i style="background:#fcfbf9"></i><b>Giấy</b><span>#FCFBF9 · thẻ</span></div>
+      <div class="sw"><i style="background:#102a45"></i><b>Navy</b><span>#102A45 · chữ 11,8:1</span></div>
+      <div class="sw"><i style="background:#52667a"></i><b>Mực nhạt</b><span>#52667A · chú thích 4,8:1</span></div>
+      <div class="sw"><i style="background:#e86f51"></i><b>San hô</b><span>#E86F51 · mảng màu, số lớn</span></div>
+      <div class="sw"><i style="background:#ae3f26"></i><b>San hô đậm</b><span>#AE3F26 · chữ nhỏ 5,7:1</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ba mức độ tươi</h2>
+    <div class="card levels">
+      <span class="lv very"><span class="mk"></span>Rất tươi</span>
+      <span class="lv fresh"><span class="mk"></span>Tươi</span>
+      <span class="lv not"><span class="mk"></span>Không tươi</span>
+      <span class="lv none"><span class="mk"></span>Từ chối kết luận</span>
+      <p class="t-caption">Hình dấu mang nghĩa: tròn đặc, nửa tròn, vòng rỗng. Màu chỉ hỗ trợ thêm.</p>
+    </div>
+  </section>
+
+  <section class="type">
+    <h2>Chữ</h2>
+    <p class="t-display">Không tươi</p>
+    <p class="t-title">Kết quả kiểm tra</p>
+    <p class="t-row">Từ chối kết luận</p>
+    <p class="t-numeral num">96% · 0,35</p>
+    <p class="t-latin">Nibea albiflora</p>
+    <p class="t-body">Ảnh lạ so với dữ liệu đã học. Lượt kiểm tra này cần chụp thêm ảnh ở ngưỡng sáng tốt hơn.</p>
+    <p class="t-small">Độ tin cậy 96% · 2 ảnh · Mắt, mùi, mang, thịt</p>
+    <p class="t-caption">Chú thích 12 px: Ngưỡng 95% · Hôm qua 17:20</p>
+    <p class="label">Mức độ tươi · Độ lạ của ảnh</p>
+  </section>
+
+  <section>
+    <h2>Nút và chip</h2>
+    <div class="stack">
+      <button class="btn primary">Kiểm tra con cá khác</button>
+      <button class="btn accent">Phân tích</button>
+      <button class="btn">Chọn ảnh từ thư viện</button>
+      <div class="chips">
+        <button class="chip on">Tất cả</button><button class="chip">Đã có kết luận</button>
+        <button class="chip">Ảnh 1/3</button><a class="link" href="#">Hỏi thêm</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Thẻ kết luận</h2>
+    <div class="card">
+      <div class="verdict-head">
+        <div><span class="label">Mức độ tươi</span><p class="verdict-word">Tươi</p></div>
+        <div class="conf"><b class="num">96%</b><span class="label">Độ tin cậy</span></div>
+      </div>
+      <div class="bars">
+        <div class="bar-row very"><div class="top"><span class="lv"><span class="mk"></span>Rất tươi</span><span class="num">2%</span></div><div class="track"><i style="width:2%"></i></div></div>
+        <div class="bar-row is-top fresh"><div class="top"><span class="lv"><span class="mk"></span>Tươi</span><span class="num">96%</span></div><div class="track"><i style="width:96%"></i></div></div>
+        <div class="bar-row not"><div class="top"><span class="lv"><span class="mk"></span>Không tươi</span><span class="num">2%</span></div><div class="track"><i style="width:2%"></i></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Thước điểm lạ</h2>
+    <div class="card">
+      <span class="label">Độ lạ của ảnh</span>
+      <p class="gauge-val num">0,20</p>
+      <div class="gauge"><i style="width:20%"></i><u style="left:35%"></u></div>
+      <div class="gauge-scale"><span style="left:35%">Ngưỡng 0,35</span></div>
+      <p class="t-small">Ảnh quen thuộc</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dòng lịch sử, lời nhắc, điều hướng</h2>
+    <div class="card rows">
+      <div class="row"><i class="thumb"></i><div><p class="t-row fresh"><span class="mk"></span><span style="color:var(--fe-navy)">Tươi</span></p><p class="t-small">Độ tin cậy 96% · 1 ảnh</p></div><time>10:42</time></div>
+      <div class="row"><i class="thumb"></i><div><p class="t-row none"><span class="mk"></span><span style="color:var(--fe-navy)">Từ chối kết luận</span></p><p class="t-small">Ảnh lạ, độ tin cậy thấp · 3 ảnh</p></div><time>09:15</time></div>
+      <nav class="nav" aria-label="Điều hướng">
+        <a href="#" aria-current="page"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>Kiểm tra</a>
+        <a href="#"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Lịch sử</a>
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M5 20v-7M12 20V5M19 20v-10"/></svg>Thống kê</a>
+      </nav>
+    </div>
+    <p class="notice" style="margin-top:14px">Công cụ hỗ trợ, không thay thế kiểm định an toàn thực phẩm.</p>
+  </section>
+</main>
+</body>
+</html>
